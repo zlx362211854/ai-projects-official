@@ -28,11 +28,21 @@ jobs:
 
       - name: Validate deployment secrets
         run: |
+          DEPLOY_HOST="$(printf '%s' "$DEPLOY_HOST" | sed '/^[[:space:]]*$/d' | head -n 1 | tr -d '\r')"
+          DEPLOY_USER="$(printf '%s' "$DEPLOY_USER" | sed '/^[[:space:]]*$/d' | head -n 1 | tr -d '\r')"
+          DEPLOY_PORT="$(printf '%s' "$DEPLOY_PORT" | sed '/^[[:space:]]*$/d' | head -n 1 | tr -d '\r')"
+          PROJECT_PATH="$(printf '%s' "$PROJECT_PATH" | sed '/^[[:space:]]*$/d' | head -n 1 | tr -d '\r')"
           test -n "$DEPLOY_HOST"
           test -n "$DEPLOY_USER"
           test -n "$DEPLOY_PORT"
           test -n "$PROJECT_PATH"
           test -n "$DEPLOY_SSH_KEY"
+          {
+            echo "DEPLOY_HOST=$DEPLOY_HOST"
+            echo "DEPLOY_USER=$DEPLOY_USER"
+            echo "DEPLOY_PORT=$DEPLOY_PORT"
+            echo "PROJECT_PATH=$PROJECT_PATH"
+          } >> "$GITHUB_ENV"
 
       - name: Configure SSH
         run: |
@@ -43,10 +53,10 @@ jobs:
 
       - name: Pull latest code and build
         run: |
-          ssh -i ~/.ssh/deploy_key -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" "
+          ssh -i ~/.ssh/deploy_key -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" PROJECT_PATH="$PROJECT_PATH" 'bash -s' <<'EOF'
             set -e
-            cd '$PROJECT_PATH'
+            cd "$PROJECT_PATH"
             git pull --ff-only origin main
             npm ci
             npm run build
-          "
+          EOF
