@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Project Manager 中文介绍</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="project-manager-showcase-zh" data-composition-id="project-manager-showcase-zh" data-start="0" data-width="1920" data-height="1080" data-duration="18">
+      <div class="grid" data-layout-ignore></div>
+      <div class="glow" data-layout-ignore></div>
+
+      <section class="scene scene-1">
+        <div class="scene-content intro">
+          <p class="label">AI PROJECT MANAGER</p>
+          <h1>从需求到可执行计划。</h1>
+          <p class="sub">用 LangGraph 把原始想法转成任务、优先级、时间线和资源分配。</p>
+        </div>
+      </section>
+
+      <section class="scene scene-2">
+        <div class="scene-content product">
+          <div>
+            <p class="label copper">实时工作流</p>
+            <h2>每一步都可见。</h2>
+            <div class="chips">
+              <span>解析</span><span>澄清</span><span>拆解</span><span>评估</span><span>分配</span>
+            </div>
+          </div>
+          <div class="screen-wrap">
+            <img src="media/project-manager-analysis.png" alt="AI Project Manager interface" />
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-3">
+        <div class="scene-content product reverse">
+          <div class="screen-wrap secondary">
+            <img src="media/project-manager-chat.png" alt="AI Project Manager chat" />
+          </div>
+          <div>
+            <p class="label">流式智能</p>
+            <h2>澄清、推理、更新。</h2>
+            <p class="sub narrow">SSE 进度、交互式澄清、可导出计划和会话恢复，集中在一个项目工作台里。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-4">
+        <div class="scene-content outro">
+          <p class="label">FASTAPI · LANGGRAPH · REACT</p>
+          <h2>把项目管理做成 AI 系统。</h2>
+        </div>
+      </section>
+
+      <div class="transition tr-1"></div>
+      <div class="transition tr-2"></div>
+      <div class="transition tr-3"></div>
+
+      <style>
+        html, body { margin: 0; width: 100%; height: 100%; background: #08090b; overflow: hidden; }
+        #project-manager-showcase-zh {
+          position: relative;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          color: #f5f1e8;
+          background: radial-gradient(circle at 22% 26%, rgba(217,135,79,.18), rgba(8,9,11,0) 30%), radial-gradient(circle at 78% 18%, rgba(215,183,106,.13), rgba(8,9,11,0) 28%), #08090b;
+          font-family: "Noto Sans SC", sans-serif;
+        }
+        .grid { position:absolute; inset:0; opacity:.35; background-image: linear-gradient(rgba(245,241,232,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,232,.04) 1px, transparent 1px); background-size: 84px 84px; }
+        .glow { position:absolute; left:640px; top:130px; width:760px; height:760px; border-radius:50%; background: radial-gradient(circle, rgba(215,183,106,.22), rgba(215,183,106,0) 62%); filter: blur(10px); }
+        .scene { position:absolute; inset:0; opacity:0; z-index:2; }
+        .scene-content { width:100%; height:100%; box-sizing:border-box; padding:132px 156px; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+        .intro, .outro { align-items:flex-start; }
+        .product { display:grid; grid-template-columns: .78fr 1.22fr; align-items:center; gap:70px; }
+        .reverse { grid-template-columns: 1.14fr .86fr; }
+        .label { margin:0; color:#d7b76a; font-size:24px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+        .copper { color:#d9874f; }
+        h1, h2 { margin:0; max-width:980px; font-family:"Noto Serif SC",serif; font-weight:800; letter-spacing:.01em; line-height:1.1; text-wrap:balance; }
+        h1 { font-size:104px; }
+        h2 { font-size:82px; }
+        .sub { max-width:860px; margin:0; color:rgba(245,241,232,.82); font-size:34px; line-height:1.55; }
+        .narrow { max-width:680px; }
+        .chips { display:flex; flex-wrap:wrap; gap:14px; margin-top:24px; }
+        .chips span { padding:14px 18px; border:1px solid rgba(217,135,79,.32); background:rgba(245,241,232,.07); color:#f5f1e8; font-size:24px; font-weight:800; }
+        .screen-wrap { padding:18px; border:1px solid rgba(245,241,232,.18); background:rgba(23,25,29,.84); box-shadow:0 44px 120px rgba(0,0,0,.44); }
+        .screen-wrap img { display:block; width:100%; border-radius:8px; }
+        .secondary { transform: translateY(14px); }
+        .transition { position:absolute; inset:0; z-index:6; opacity:0; pointer-events:none; background:rgba(8,9,11,.96); filter:blur(0); }
+      </style>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        tl.set(".scene-1", { opacity: 1 }, 0);
+        tl.set(".scene-2", { opacity: 1 }, 4.4);
+        tl.set(".scene-3", { opacity: 1 }, 8.9);
+        tl.set(".scene-4", { opacity: 1 }, 13.4);
+        tl.from(".grid", { opacity: 0, scale: 1.04, duration: 1.2, ease: "sine.out" }, .1);
+        tl.to(".grid", { x: -36, y: 24, duration: 17, ease: "sine.inOut" }, .4);
+        tl.from(".glow", { opacity: 0, scale: .82, duration: 1.4, ease: "sine.out" }, .2);
+        tl.to(".glow", { x: 70, scale: 1.08, duration: 15.6, ease: "sine.inOut" }, 1.62);
+        tl.from(".scene-1 .label", { y: 24, opacity: 0, duration: .5, ease: "power3.out" }, .3);
+        tl.from(".scene-1 h1", { y: 62, opacity: 0, duration: .78, ease: "expo.out" }, .52);
+        tl.from(".scene-1 .sub", { y: 34, opacity: 0, duration: .58, ease: "sine.out" }, .92);
+        tl.to(".tr-1", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 4.05);
+        tl.set(".scene-1", { opacity: 0 }, 4.38);
+        tl.to(".tr-1", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 4.5);
+        tl.from(".scene-2 .label", { x: -36, opacity: 0, duration: .48, ease: "power3.out" }, 4.66);
+        tl.from(".scene-2 h2", { y: 52, opacity: 0, duration: .72, ease: "expo.out" }, 4.82);
+        tl.from(".scene-2 .chips span", { y: 18, opacity: 0, duration: .36, stagger: .08, ease: "back.out(1.5)" }, 5.16);
+        tl.from(".scene-2 .screen-wrap", { x: 60, opacity: 0, scale: .975, duration: .75, ease: "power2.out" }, 4.86);
+        tl.to(".tr-2", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 8.52);
+        tl.set(".scene-2", { opacity: 0 }, 8.84);
+        tl.to(".tr-2", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 8.94);
+        tl.from(".scene-3 .screen-wrap", { x: -54, opacity: 0, scale: .975, duration: .72, ease: "power2.out" }, 9.14);
+        tl.from(".scene-3 .label", { x: 36, opacity: 0, duration: .48, ease: "power3.out" }, 9.24);
+        tl.from(".scene-3 h2", { y: 52, opacity: 0, duration: .72, ease: "expo.out" }, 9.42);
+        tl.from(".scene-3 .sub", { y: 30, opacity: 0, duration: .56, ease: "sine.out" }, 9.82);
+        tl.to(".tr-3", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 13.02);
+        tl.set(".scene-3", { opacity: 0 }, 13.34);
+        tl.to(".tr-3", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 13.48);
+        tl.from(".scene-4 .label", { y: 28, opacity: 0, duration: .5, ease: "power3.out" }, 13.72);
+        tl.from(".scene-4 h2", { y: 64, opacity: 0, duration: .82, ease: "expo.out" }, 13.96);
+        tl.to(".scene-4 .label, .scene-4 h2, .grid, .glow", { opacity: 0, duration: .72, ease: "sine.inOut" }, 17.15);
+        window.__timelines["project-manager-showcase-zh"] = tl;
+      </script>
+    </div>
+  </body>
+</html>

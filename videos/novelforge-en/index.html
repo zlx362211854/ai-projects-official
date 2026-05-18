@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovelForge English Showcase</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="novelforge-showcase-en" data-composition-id="novelforge-showcase-en" data-start="0" data-width="1920" data-height="1080" data-duration="20">
+      <div class="grid" data-layout-ignore></div>
+      <div class="orb" data-layout-ignore></div>
+
+      <section class="scene scene-1" data-layout-allow-overflow>
+        <div class="scene-content intro">
+          <p class="label">NOVELFORGE</p>
+          <h1>An AI workspace for long-form fiction.</h1>
+          <p class="sub">Worldbuilding, story memory, architecture, drafting, review, and repair in one production loop.</p>
+        </div>
+      </section>
+
+      <section class="scene scene-2" data-layout-allow-overflow>
+        <div class="scene-content product">
+          <div class="product-board">
+            <div class="board-top">
+              <span>NOVELFORGE</span>
+              <span>STORY MEMORY ONLINE</span>
+            </div>
+            <div class="board-grid">
+              <div class="editor-panel">
+                <p class="panel-kicker">CHAPTER 18 · DRAFTING</p>
+                <h3>The city keeps its old promises.</h3>
+                <div class="line wide"></div>
+                <div class="line"></div>
+                <div class="line short"></div>
+                <div class="cursor"></div>
+              </div>
+              <div class="memory-panel">
+                <p class="panel-kicker">RETRIEVED CONTEXT</p>
+                <div class="memory-card active"><strong>Character State</strong><span>Mira still carries the brass key.</span></div>
+                <div class="memory-card"><strong>World Rule</strong><span>North gate closes after moonrise.</span></div>
+                <div class="memory-card"><strong>Timeline</strong><span>Festival begins three days later.</span></div>
+              </div>
+              <div class="signal-panel">
+                <p class="panel-kicker">CONTINUITY SCORE</p>
+                <strong>94%</strong>
+                <div class="meter"><span></span></div>
+              </div>
+              <div class="graph-panel">
+                <span>BOOTSTRAP</span>
+                <i></i>
+                <span>DRAFT</span>
+                <i></i>
+                <span>REVIEW</span>
+                <i></i>
+                <span>REPAIR</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="label cyan">STORY MEMORY</p>
+            <h2>Context that survives every chapter.</h2>
+            <p class="sub narrow">Story bible, chapter memory cards, and retrieval keep characters, settings, and timelines coherent.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-3" data-layout-allow-overflow>
+        <div class="scene-content board">
+          <p class="label">AI PRODUCTION CHAIN</p>
+          <h2>Generate. Review. Repair. Automate.</h2>
+          <div class="steps">
+            <div><strong>Bootstrap</strong><span>from prompt to novel architecture</span></div>
+            <div><strong>Draft</strong><span>chapter generation with persistent context</span></div>
+            <div><strong>Review</strong><span>continuity checks across chapters</span></div>
+            <div><strong>Automate</strong><span>recurring backend production tasks</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-4" data-layout-allow-overflow>
+        <div class="scene-content outro">
+          <p class="label">LANGGRAPH · SQLITE-VEC · REACT</p>
+          <h2>Novel writing as an AI operating system.</h2>
+        </div>
+      </section>
+
+      <div class="transition tr-1"></div>
+      <div class="transition tr-2"></div>
+      <div class="transition tr-3"></div>
+
+      <style>
+        html, body { margin:0; width:100%; height:100%; background:#08090b; overflow:hidden; }
+        #novelforge-showcase-en {
+          position:relative;
+          width:1920px;
+          height:1080px;
+          overflow:hidden;
+          color:#f5f1e8;
+          background: radial-gradient(circle at 72% 20%, rgba(139,233,226,.17), rgba(8,9,11,0) 30%), radial-gradient(circle at 22% 76%, rgba(215,183,106,.12), rgba(8,9,11,0) 26%), #08090b;
+          font-family:"Montserrat","Helvetica Neue",sans-serif;
+        }
+        .grid { position:absolute; inset:0; opacity:.32; background-image:linear-gradient(rgba(245,241,232,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,232,.035) 1px, transparent 1px); background-size:88px 88px; }
+        .orb { position:absolute; right:210px; top:90px; width:740px; height:740px; border-radius:50%; background:radial-gradient(circle, rgba(139,233,226,.18), rgba(139,233,226,0) 64%); filter:blur(12px); }
+        .scene { position:absolute; inset:0; opacity:1; z-index:2; transform:translateX(2400px); }
+        .scene-content { width:100%; height:100%; box-sizing:border-box; padding:132px 156px; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+        .intro,.outro,.board { align-items:flex-start; }
+        .product { display:grid; grid-template-columns:1.08fr .92fr; align-items:center; gap:68px; }
+        .label { margin:0; color:#d7b76a; font-size:24px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+        .cyan { color:#8be9e2; }
+        h1,h2 { margin:0; max-width:1080px; font-family:"Georgia","Times New Roman",serif; font-weight:500; letter-spacing:-.035em; line-height:.98; text-wrap:balance; }
+        h1 { font-size:116px; }
+        h2 { font-size:88px; }
+        .sub { max-width:860px; margin:0; color:rgba(245,241,232,.78); font-size:31px; line-height:1.45; }
+        .narrow { max-width:640px; }
+        .product-board { height:640px; padding:22px; border:1px solid rgba(139,233,226,.28); background:linear-gradient(135deg, rgba(245,241,232,.1), rgba(17,20,25,.86)); box-shadow:0 44px 120px rgba(0,0,0,.48); box-sizing:border-box; overflow:hidden; }
+        .board-top { display:flex; justify-content:space-between; align-items:center; height:54px; padding:0 18px; border:1px solid rgba(245,241,232,.12); color:#8be9e2; font-family:"IBM Plex Mono","Consolas",monospace; font-size:18px; letter-spacing:.08em; }
+        .board-grid { display:grid; grid-template-columns:1.18fr .82fr; grid-template-rows:1fr 152px; gap:16px; height:calc(100% - 72px); margin-top:18px; }
+        .editor-panel,.memory-panel,.signal-panel,.graph-panel { border:1px solid rgba(245,241,232,.14); background:rgba(8,9,11,.58); padding:24px; box-sizing:border-box; }
+        .editor-panel { position:relative; overflow:hidden; }
+        .panel-kicker { margin:0 0 20px; color:#d7b76a; font-family:"IBM Plex Mono","Consolas",monospace; font-size:17px; letter-spacing:.1em; }
+        .editor-panel h3 { margin:0 0 48px; max-width:560px; color:#f5f1e8; font-family:"Georgia","Times New Roman",serif; font-size:52px; font-weight:500; line-height:1.02; letter-spacing:-.03em; }
+        .line { height:15px; width:78%; margin-top:18px; border-radius:999px; background:linear-gradient(90deg, rgba(245,241,232,.52), rgba(245,241,232,.08)); }
+        .line.wide { width:92%; }
+        .line.short { width:54%; }
+        .cursor { width:3px; height:46px; background:#8be9e2; position:absolute; left:366px; top:248px; box-shadow:0 0 28px rgba(139,233,226,.7); }
+        .memory-panel { overflow:hidden; }
+        .memory-card { margin-top:13px; padding:16px 18px; border:1px solid rgba(139,233,226,.16); background:rgba(245,241,232,.055); }
+        .memory-card.active { border-color:rgba(139,233,226,.54); background:rgba(139,233,226,.12); }
+        .memory-card strong { display:block; color:#f5f1e8; font-size:20px; }
+        .memory-card span { display:block; margin-top:8px; color:rgba(245,241,232,.7); font-size:18px; line-height:1.25; }
+        .signal-panel strong { display:block; color:#f5f1e8; font-size:66px; line-height:1; }
+        .meter { height:12px; margin-top:24px; background:rgba(245,241,232,.1); overflow:hidden; }
+        .meter span { display:block; height:100%; width:94%; background:linear-gradient(90deg, #8be9e2, #d7b76a); }
+        .graph-panel { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .graph-panel span { padding:14px 16px; border:1px solid rgba(139,233,226,.24); color:#8be9e2; font-family:"IBM Plex Mono","Consolas",monospace; font-size:17px; }
+        .graph-panel i { flex:1; height:1px; background:linear-gradient(90deg, rgba(139,233,226,.8), rgba(215,183,106,.5)); }
+        .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; width:100%; margin-top:18px; }
+        .steps div { min-height:190px; padding:24px; border:1px solid rgba(245,241,232,.16); background:rgba(245,241,232,.06); }
+        .steps strong { display:block; color:#8be9e2; font-family:"IBM Plex Mono","Consolas",monospace; font-size:26px; text-transform:uppercase; }
+        .steps span { display:block; margin-top:18px; color:rgba(245,241,232,.78); font-size:23px; line-height:1.35; }
+        .transition { position:absolute; inset:0; z-index:6; opacity:0; pointer-events:none; background:rgba(8,9,11,.96); filter:blur(0); }
+      </style>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        tl.set(".scene-1", { x: 0 }, 0);
+        tl.set(".scene-2", { x: 0 }, 4.7);
+        tl.set(".scene-3", { x: 0 }, 10.0);
+        tl.set(".scene-4", { x: 0 }, 15.2);
+        tl.from(".grid", { opacity: 0, scale: 1.04, duration: 1.2, ease: "sine.out" }, .1);
+        tl.to(".grid", { x: -40, y: 24, duration: 19, ease: "sine.inOut" }, .4);
+        tl.from(".orb", { opacity: 0, scale: .82, duration: 1.4, ease: "sine.out" }, .2);
+        tl.to(".orb", { x: -72, scale: 1.08, duration: 18, ease: "sine.inOut" }, 1.62);
+        tl.from(".scene-1 .label", { y: 24, opacity: 0, duration: .5, ease: "power3.out" }, .3);
+        tl.from(".scene-1 h1", { y: 60, opacity: 0, duration: .78, ease: "expo.out" }, .52);
+        tl.from(".scene-1 .sub", { y: 34, opacity: 0, duration: .58, ease: "sine.out" }, .92);
+        tl.to(".tr-1", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 4.3);
+        tl.set(".scene-1", { x: -2400 }, 4.62);
+        tl.to(".tr-1", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 4.74);
+        tl.from(".scene-2 .product-board", { x: -56, opacity: 0, scale: .975, duration: .72, ease: "power2.out" }, 4.96);
+        tl.from(".scene-2 .editor-panel h3, .scene-2 .line", { x: -28, opacity: 0, duration: .48, stagger: .08, ease: "power2.out" }, 5.24);
+        tl.from(".scene-2 .memory-card", { x: 32, opacity: 0, duration: .44, stagger: .1, ease: "power2.out" }, 5.42);
+        tl.from(".scene-2 .signal-panel, .scene-2 .graph-panel", { y: 28, opacity: 0, duration: .46, stagger: .1, ease: "power2.out" }, 5.62);
+        tl.fromTo(".scene-2 .meter span", { width: "0%" }, { width: "94%", duration: .9, ease: "power3.out" }, 5.82);
+        tl.to(".scene-2 .cursor", { opacity: 0, duration: .22, repeat: 9, yoyo: true, ease: "steps(1)" }, 5.88);
+        tl.from(".scene-2 .label", { x: 36, opacity: 0, duration: .48, ease: "power3.out" }, 5.08);
+        tl.from(".scene-2 h2", { y: 52, opacity: 0, duration: .72, ease: "expo.out" }, 5.24);
+        tl.from(".scene-2 .sub", { y: 30, opacity: 0, duration: .56, ease: "sine.out" }, 5.66);
+        tl.to(".tr-2", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 9.58);
+        tl.set(".scene-2", { x: -2400 }, 9.92);
+        tl.to(".tr-2", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 10.04);
+        tl.from(".scene-3 .label", { y: 24, opacity: 0, duration: .48, ease: "power3.out" }, 10.28);
+        tl.from(".scene-3 h2", { y: 54, opacity: 0, duration: .72, ease: "expo.out" }, 10.48);
+        tl.from(".steps div", { y: 34, opacity: 0, duration: .48, stagger: .12, ease: "back.out(1.35)" }, 10.92);
+        tl.to(".tr-3", { opacity: 1, filter: "blur(14px)", duration: .42, ease: "power2.inOut" }, 14.78);
+        tl.set(".scene-3", { x: -2400 }, 15.12);
+        tl.to(".tr-3", { opacity: 0, filter: "blur(0px)", duration: .52, ease: "sine.inOut" }, 15.24);
+        tl.from(".scene-4 .label", { y: 28, opacity: 0, duration: .5, ease: "power3.out" }, 15.52);
+        tl.from(".scene-4 h2", { y: 64, opacity: 0, duration: .82, ease: "expo.out" }, 15.76);
+        tl.to(".scene-4 .label, .scene-4 h2, .grid, .orb", { opacity: 0, duration: .72, ease: "sine.inOut" }, 19.16);
+        window.__timelines["novelforge-showcase-en"] = tl;
+      </script>
+    </div>
+  </body>
+</html>

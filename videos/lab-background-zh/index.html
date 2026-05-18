@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Product Lab 中文背景</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="ai-lab-background"
+      data-composition-id="ai-lab-background"
+      data-start="0"
+      data-width="1920"
+      data-height="1080"
+      data-duration="22"
+    >
+      <div class="film">
+        <div class="grain" data-layout-ignore></div>
+        <div class="field" data-layout-ignore>
+          <span class="ring r1"></span>
+          <span class="ring r2"></span>
+          <span class="ring r3"></span>
+          <span class="node n1"></span>
+          <span class="node n2"></span>
+          <span class="node n3"></span>
+          <span class="node n4"></span>
+          <span class="trace t1"></span>
+          <span class="trace t2"></span>
+          <span class="trace t3"></span>
+        </div>
+
+        <section class="scene scene-1">
+          <div class="scene-content center">
+            <p class="label">LINK ZHAO / AI PRODUCT LAB</p>
+            <h1>不是提示词，是系统。</h1>
+            <p class="sub">两个围绕真实工作流打造的 AI 产品。</p>
+          </div>
+        </section>
+
+        <section class="scene scene-2">
+          <div class="scene-content split">
+            <div>
+              <p class="label copper">01 / AI PROJECT MANAGER</p>
+              <h2>需求变成可执行计划。</h2>
+            </div>
+            <div class="data-board">
+              <div><strong>解析</strong><span>结构化需求</span></div>
+              <div><strong>拆解</strong><span>流式生成任务</span></div>
+              <div><strong>分配</strong><span>排期与冲突调整</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene-3">
+          <div class="scene-content split reverse">
+            <div class="data-board cyan-board">
+              <div><strong>圣经</strong><span>世界观与角色记忆</span></div>
+              <div><strong>审阅</strong><span>连续性智能检查</span></div>
+              <div><strong>自动化</strong><span>周期生产闭环</span></div>
+            </div>
+            <div>
+              <p class="label cyan">02 / NOVELFORGE</p>
+              <h2>带长期记忆的写作工作台。</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene-4">
+          <div class="scene-content center">
+            <p class="label">FULL STACK AI WORKFLOWS</p>
+            <h2>图编排。实时状态。持久上下文。</h2>
+            <p class="sub">从本地原型走向可部署的 AI 产品系统。</p>
+          </div>
+        </section>
+
+        <div class="transition transition-1"></div>
+        <div class="transition transition-2"></div>
+        <div class="transition transition-3"></div>
+      </div>
+      <style>
+        html,
+        body {
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          background: #08090b;
+          overflow: hidden;
+        }
+
+        #ai-lab-background {
+          position: relative;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 18% 18%, rgba(215, 183, 106, 0.18), rgba(215, 183, 106, 0) 28%),
+            radial-gradient(circle at 82% 22%, rgba(139, 233, 226, 0.14), rgba(139, 233, 226, 0) 30%),
+            #08090b;
+          color: #f5f1e8;
+          font-family: "Noto Sans SC", sans-serif;
+        }
+
+        .film {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+        }
+
+        .grain {
+          position: absolute;
+          inset: 0;
+          z-index: 9;
+          pointer-events: none;
+          opacity: 0.1;
+          background-image:
+            linear-gradient(90deg, rgba(245, 241, 232, 0.08) 1px, rgba(8, 9, 11, 0) 1px),
+            linear-gradient(rgba(245, 241, 232, 0.07) 1px, rgba(8, 9, 11, 0) 1px);
+          background-size: 7px 7px;
+          mix-blend-mode: screen;
+        }
+
+        .field {
+          position: absolute;
+          inset: -8%;
+          z-index: 1;
+          background-image:
+            linear-gradient(rgba(245, 241, 232, 0.045) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(245, 241, 232, 0.035) 1px, transparent 1px);
+          background-size: 96px 96px;
+          opacity: 0.72;
+        }
+
+        .ring,
+        .node,
+        .trace {
+          position: absolute;
+          display: block;
+        }
+
+        .ring {
+          border: 1px solid rgba(245, 241, 232, 0.14);
+          border-radius: 50%;
+          box-shadow: 0 0 80px rgba(215, 183, 106, 0.08);
+        }
+
+        .r1 {
+          left: 585px;
+          top: 95px;
+          width: 760px;
+          height: 760px;
+          transform: rotateX(68deg) rotateZ(18deg);
+        }
+
+        .r2 {
+          left: 410px;
+          top: 195px;
+          width: 1110px;
+          height: 520px;
+          transform: rotateZ(-16deg);
+          border-color: rgba(139, 233, 226, 0.17);
+        }
+
+        .r3 {
+          left: 710px;
+          top: 255px;
+          width: 480px;
+          height: 480px;
+          border-color: rgba(217, 135, 79, 0.22);
+        }
+
+        .node {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: #d7b76a;
+          box-shadow: 0 0 30px rgba(215, 183, 106, 0.8);
+        }
+
+        .n1 { left: 420px; top: 280px; }
+        .n2 { right: 380px; top: 220px; background: #8be9e2; box-shadow: 0 0 30px rgba(139, 233, 226, 0.8); }
+        .n3 { left: 820px; bottom: 230px; background: #d9874f; box-shadow: 0 0 30px rgba(217, 135, 79, 0.75); }
+        .n4 { right: 540px; bottom: 300px; }
+
+        .trace {
+          height: 1px;
+          transform-origin: left center;
+          background: linear-gradient(90deg, rgba(215, 183, 106, 0), rgba(215, 183, 106, 0.74), rgba(215, 183, 106, 0));
+        }
+
+        .t1 { left: 420px; top: 286px; width: 850px; transform: rotate(-4deg); }
+        .t2 { left: 820px; bottom: 236px; width: 590px; transform: rotate(-19deg); background: linear-gradient(90deg, rgba(139, 233, 226, 0), rgba(139, 233, 226, 0.76), rgba(139, 233, 226, 0)); }
+        .t3 { left: 640px; top: 622px; width: 760px; transform: rotate(22deg); background: linear-gradient(90deg, rgba(217, 135, 79, 0), rgba(217, 135, 79, 0.68), rgba(217, 135, 79, 0)); }
+
+        .scene {
+          position: absolute;
+          inset: 0;
+          z-index: 3;
+          background-color: rgba(8, 9, 11, 0.01);
+        }
+
+        .scene-content {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 140px 170px;
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+        }
+
+        .center {
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .split {
+          display: grid;
+          grid-template-columns: 1.03fr 0.97fr;
+          align-items: center;
+          gap: 84px;
+        }
+
+        .reverse {
+          grid-template-columns: 0.96fr 1.04fr;
+        }
+
+        .label {
+          margin: 0;
+          color: #d7b76a;
+          font-size: 25px;
+          font-weight: 900;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+
+        .label.copper { color: #d9874f; }
+        .label.cyan { color: #8be9e2; }
+
+        h1,
+        h2 {
+          margin: 0;
+          max-width: 1120px;
+          color: #f5f1e8;
+          font-family: "Noto Serif SC", serif;
+          font-weight: 800;
+          letter-spacing: 0.01em;
+          line-height: 1.1;
+          text-wrap: balance;
+        }
+
+        h1 {
+          font-size: 120px;
+        }
+
+        h2 {
+          font-size: 94px;
+        }
+
+        .sub {
+          max-width: 780px;
+          margin: 0;
+          color: rgba(245, 241, 232, 0.75);
+          font-size: 36px;
+          line-height: 1.36;
+        }
+
+        .data-board {
+          display: grid;
+          gap: 18px;
+          padding: 28px;
+          border: 1px solid rgba(217, 135, 79, 0.28);
+          background: rgba(8, 9, 11, 0.7);
+          box-shadow: 0 38px 110px rgba(0, 0, 0, 0.34);
+        }
+
+        .cyan-board {
+          border-color: rgba(139, 233, 226, 0.28);
+        }
+
+        .data-board div {
+          padding: 26px 28px;
+          border: 1px solid rgba(245, 241, 232, 0.15);
+          background: rgba(245, 241, 232, 0.055);
+        }
+
+        .data-board strong {
+          display: block;
+          color: #f5f1e8;
+          font-size: 31px;
+          font-weight: 900;
+        }
+
+        .data-board span {
+          display: inline-block;
+          margin-top: 8px;
+          padding: 4px 8px;
+          background: rgba(8, 9, 11, 0.72);
+          color: rgba(245, 241, 232, 0.88);
+          font-size: 23px;
+          text-shadow: 0 1px 18px rgba(8, 9, 11, 0.8);
+        }
+
+        .transition {
+          position: absolute;
+          inset: 0;
+          z-index: 7;
+          opacity: 0;
+          pointer-events: none;
+          background:
+            radial-gradient(circle at 50% 50%, rgba(245, 241, 232, 0.16), rgba(245, 241, 232, 0) 34%),
+            rgba(8, 9, 11, 0.94);
+          filter: blur(0);
+        }
+      </style>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        tl.set(".scene", { opacity: 0 }, 0);
+        tl.set(".scene-1", { opacity: 1 }, 0);
+        tl.set(".scene-2", { opacity: 1 }, 5.2);
+        tl.set(".scene-3", { opacity: 1 }, 10.7);
+        tl.set(".scene-4", { opacity: 1 }, 16.0);
+
+        tl.from(".field", { scale: 1.08, opacity: 0, duration: 1.6, ease: "sine.out" }, 0.1);
+        tl.to(".field", { x: -42, y: 28, scale: 1.03, duration: 19.6, ease: "sine.inOut" }, 1.8);
+        tl.to(".r1", { rotation: 18, scale: 1.08, duration: 8, repeat: 2, yoyo: true, ease: "sine.inOut" }, 0.2);
+        tl.to(".r2", { rotation: -8, scale: 1.05, duration: 7, repeat: 3, yoyo: true, ease: "sine.inOut" }, 0.2);
+        tl.to(".r3", { scale: 0.92, duration: 5.5, repeat: 3, yoyo: true, ease: "sine.inOut" }, 0.2);
+        tl.from(".node", { scale: 0, opacity: 0, duration: 0.7, stagger: 0.16, ease: "back.out(1.7)" }, 0.55);
+        tl.from(".trace", { scaleX: 0, opacity: 0, duration: 1.1, stagger: 0.18, ease: "power3.out" }, 0.75);
+
+        tl.from(".scene-1 .label", { y: 28, opacity: 0, duration: 0.55, ease: "power3.out" }, 0.35);
+        tl.from(".scene-1 h1", { y: 76, opacity: 0, scale: 0.985, duration: 0.85, ease: "expo.out" }, 0.55);
+        tl.from(".scene-1 .sub", { y: 42, opacity: 0, duration: 0.62, ease: "sine.out" }, 1.05);
+
+        tl.to(".transition-1", { opacity: 1, filter: "blur(16px)", duration: 0.42, ease: "power2.inOut" }, 4.8);
+        tl.set(".scene-1", { opacity: 0 }, 5.18);
+        tl.to(".transition-1", { opacity: 0, filter: "blur(0px)", duration: 0.55, ease: "sine.inOut" }, 5.24);
+        tl.from(".scene-2 .label", { x: -42, opacity: 0, duration: 0.58, ease: "power3.out" }, 5.45);
+        tl.from(".scene-2 h2", { y: 72, opacity: 0, duration: 0.78, ease: "expo.out" }, 5.62);
+        tl.from(".scene-2 .data-board", { x: 58, opacity: 0, scale: 0.98, duration: 0.72, ease: "power2.out" }, 5.8);
+        tl.from(".scene-2 .data-board div", { y: 30, opacity: 0, duration: 0.44, stagger: 0.11, ease: "back.out(1.4)" }, 6.08);
+
+        tl.to(".transition-2", { opacity: 1, filter: "blur(18px)", duration: 0.46, ease: "power2.inOut" }, 10.25);
+        tl.set(".scene-2", { opacity: 0 }, 10.68);
+        tl.to(".transition-2", { opacity: 0, filter: "blur(0px)", duration: 0.55, ease: "sine.inOut" }, 10.74);
+        tl.from(".scene-3 .data-board", { x: -62, opacity: 0, scale: 0.98, duration: 0.72, ease: "power2.out" }, 10.95);
+        tl.from(".scene-3 .data-board div", { y: 30, opacity: 0, duration: 0.44, stagger: 0.11, ease: "back.out(1.4)" }, 11.14);
+        tl.from(".scene-3 .label", { x: 42, opacity: 0, duration: 0.56, ease: "power3.out" }, 11.08);
+        tl.from(".scene-3 h2", { y: 72, opacity: 0, duration: 0.78, ease: "expo.out" }, 11.26);
+
+        tl.to(".transition-3", { opacity: 1, filter: "blur(18px)", duration: 0.5, ease: "power2.inOut" }, 15.48);
+        tl.set(".scene-3", { opacity: 0 }, 15.96);
+        tl.to(".transition-3", { opacity: 0, filter: "blur(0px)", duration: 0.62, ease: "sine.inOut" }, 16.03);
+        tl.from(".scene-4 .label", { y: 30, opacity: 0, duration: 0.58, ease: "power3.out" }, 16.25);
+        tl.from(".scene-4 h2", { y: 76, opacity: 0, scale: 0.985, duration: 0.86, ease: "expo.out" }, 16.48);
+        tl.from(".scene-4 .sub", { y: 42, opacity: 0, duration: 0.64, ease: "sine.out" }, 16.98);
+        tl.to(".scene-4 .label, .scene-4 h2, .scene-4 .sub, .field", { opacity: 0, duration: 0.8, ease: "sine.inOut" }, 21.0);
+
+        window.__timelines["ai-lab-background"] = tl;
+      </script>
+    </div>
+  </body>
+</html>

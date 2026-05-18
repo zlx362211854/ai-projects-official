@@ -1,0 +1,15 @@
+{
+  "name": "ai-lab-background",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "hyperframes lint",
+    "validate": "hyperframes validate",
+    "inspect": "hyperframes inspect --samples 15",
+    "render": "hyperframes render --output ../../public/media/ai-lab-background.mp4 --quality standard"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.5.3"
+  }
+}
