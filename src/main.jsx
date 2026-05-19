@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   ArrowUpRight,
@@ -344,7 +344,7 @@ function ProjectSection({ project, localPathLabel }) {
       <div className="project-layout">
         <div className="project-media">
           {isVideo ? (
-            <video key={`${project.id}-${project.locale}`} src={project.mediaUrl} autoPlay muted loop playsInline />
+            <LazyProjectVideo key={`${project.id}-${project.locale}`} src={project.mediaUrl} />
           ) : (
             <img src={project.mediaUrl} alt={`${project.name} interface`} />
           )}
@@ -390,6 +390,51 @@ function ProjectSection({ project, localPathLabel }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function LazyProjectVideo({ src }) {
+  const videoRef = useRef(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '180px 0px', threshold: 0.12 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !shouldLoad) return;
+
+    const playPromise = video.play();
+    if (playPromise) {
+      playPromise.catch(() => {});
+    }
+  }, [shouldLoad, src]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={shouldLoad ? src : undefined}
+      autoPlay={shouldLoad}
+      muted
+      loop
+      playsInline
+      preload="none"
+    />
   );
 }
 
